@@ -75,6 +75,24 @@ img.avatar {
 .overlay {
   display: none;
 }
+section.promo {
+  display: none;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: #b74343;
+  height: auto;
+  margin-top: 25px;
+}
+footer h2 {
+  font-size: 3em;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  font-family: "Playfair Display", serif;
+}
 
 /* /////////////////////////
 /* Media Queries          */
