@@ -75,13 +75,6 @@ img.avatar {
   color: #5d5c5c;
   font-size: 0.9em;
 }
-.overlay {
-  display: none;
-}
-section.promo {
-  display: none;
-}
-
 footer {
   width: 100%;
   text-align: center;
@@ -117,6 +110,15 @@ footer h2 {
   border-radius: 5px;
   padding: 30px 20px;
 }
+.modal-close {
+  position: abosolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
 
 /* /////////////////////////
 /* Media Queries          */
@@ -136,7 +138,7 @@ footer h2 {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 25px 5px;
-    padding-bottom: 150px;
+    /*  padding-bottom: 150px; */
   }
   .card {
     flex-direction: row;
@@ -160,7 +162,7 @@ footer h2 {
     font-size: 0.8em;
   }
   footer {
-    position: fixed;
+    /*   position: fixed; */
     bottom: 0px;
   }
 }
