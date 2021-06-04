@@ -9,7 +9,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* position relative on the body so that when the modal window is positioned the body is the container for
+absolute positioning of the modal window */
 body {
+  position: relative;
   color: #2c2c2c;
   font-family: "Roboto", sans-serif;
   background-color: #f7f5f5;
@@ -92,6 +95,27 @@ footer h2 {
   padding-top: 20px;
   padding-bottom: 25px;
   font-family: "Playfair Display", serif;
+}
+
+/* Overlay Modal Window  */
+
+.overlay {
+  position: abosolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, 0.4);
+}
+.modal {
+  width: 375px;
+  margin: 15% auto auto;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #778;
+  border-radius: 5px;
+  padding: 30px 20px;
 }
 
 /* /////////////////////////
