@@ -16,6 +16,7 @@ body {
 }
 
 .grid-container {
+  padding-bottom: 40px;
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
@@ -111,6 +112,7 @@ footer h2 {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 25px 5px;
+    padding-bottom: 150px;
   }
   .card {
     flex-direction: row;
@@ -132,5 +134,9 @@ footer h2 {
   }
   .text-container p {
     font-size: 0.8em;
+  }
+  footer {
+    position: fixed;
+    bottom: 0px;
   }
 }
