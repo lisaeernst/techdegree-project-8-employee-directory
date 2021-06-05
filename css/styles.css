@@ -28,12 +28,17 @@ body {
 }
 header {
   grid-area: header;
+  display: flex;
+  flex-direction: column;
   background-color: #e9e7e3;
   text-align: center;
   margin-bottom: 25px;
   padding-left: 20px;
   padding-right: 20px;
   border-bottom: 2px solid #d2d2d2;
+}
+div#searchEmployees {
+  margin-bottom: 20px;
 }
 
 main {
@@ -93,7 +98,7 @@ footer h2 {
 /* Overlay Modal Window  */
 
 .overlay {
-  position: abosolute;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;

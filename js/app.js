@@ -1,21 +1,14 @@
 /* Awesome Startup Employee Directory */
 
-// randomuser.me data
 
 //Global Variables
-
 let employees = [];
-
 const urlAPI = `https://randomuser.me/api/?results=12&inc=name, picture, email, location,
 phone, dob &noinfo &nat=US`
 
 const gridContainer = document.querySelector(".grid-container");
-
-
 const overlay = document.querySelector(".overlay");
-
 const modalContainer = document.querySelector(".modal-content");
-
 const modalClose = document.querySelector(".modal-close");
 
 // fetch data from API
@@ -25,6 +18,8 @@ fetch(urlAPI)
   .then(res => res.results)
   .then(displayEmployees)
   .catch(err => console.log(err))
+
+ /* displayEmployees function that has a single parameter named employeeData */
 
   function displayEmployees(employeeData) {
 
@@ -64,7 +59,8 @@ fetch(urlAPI)
 
   function displayModal(index) {
       /* use objext destructuring make our template literal cleaner */
-      let { name, dob, phone, email, location: { city, street, state, postcode }, picture } = employees[index];
+      let { name, dob, phone, email, location: { city, street, state, postcode
+      }, picture } = employees[index];
 
       let date = new Date(dob.date);
 
@@ -90,7 +86,7 @@ fetch(urlAPI)
 
     gridContainer.addEventListener('click', e => {
         /* make sure the click is not on the gridContainer itself */
-        if(e.target !== gridContainer) {
+        if (e.target !== gridContainer) {
 
             /* select the card element based on its proximity to actual element clicked */
 
