@@ -43,7 +43,7 @@ fetch(urlAPI)
       //template literals make this so much cleaner
 
       employeeHTML += `
-      <div class="card" data-index=${index}">
+      <div class="card" data-index="${index}">
       <img class="avatar" src="${picture.large}" />
         <div class="text-container">
             <h2 class="name">${name.first} ${name.last}</h2>
@@ -58,9 +58,13 @@ fetch(urlAPI)
 
   }
 
+  /*  SEARCH  BAR */
+
+
+
   function displayModal(index) {
-      //use objext destructuring make our template literal cleaner
-      let { name, dob, phone, email, location: { city, street, state, postcode}, picture } = employees[index];
+      /* use objext destructuring make our template literal cleaner */
+      let { name, dob, phone, email, location: { city, street, state, postcode }, picture } = employees[index];
 
       let date = new Date(dob.date);
 
@@ -85,17 +89,15 @@ fetch(urlAPI)
     }
 
     gridContainer.addEventListener('click', e => {
-        //make sure the click is not on the gridContainer itself
+        /* make sure the click is not on the gridContainer itself */
         if(e.target !== gridContainer) {
 
-            //select the card element based on its proximity to actual element clicked
+            /* select the card element based on its proximity to actual element clicked */
 
             const card = e.target.closest(".card");
             const index = card.getAttribute('data-index');
-
             displayModal(index);
         }
-
     });
 
 
