@@ -116,7 +116,7 @@ footer h2 {
   padding: 30px 20px;
 }
 .modal-close {
-  position: abosolute;
+  position: absolute;
   right: 15px;
   top: 5px;
   cursor: pointer;

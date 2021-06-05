@@ -54,7 +54,18 @@ fetch(urlAPI)
   }
 
   /*  SEARCH  BAR */
+  const employeeNames = document.getElementsByClassName('.name');
+  const search = document.getElementById("searchBar");
 
+  searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+
+    const filteredEmployees = employees.filter((employee) => {
+        return employee.first.toLowerCase().includes(searchString)
+        || employee.last.toLowerCase().includes(searchString);
+    });
+    console.log(filteredEmployees);
+  });
 
 
   function displayModal(index) {
