@@ -31,14 +31,18 @@ header {
   display: flex;
   flex-direction: column;
   background-color: #e9e7e3;
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 25px;
   padding-left: 20px;
   padding-right: 20px;
   border-bottom: 2px solid #d2d2d2;
 }
-div#searchEmployees {
+
+input#search {
+  height: 30px;
   margin-bottom: 20px;
+  width: auto;
+  height: 30px;
 }
 
 main {
@@ -106,7 +110,7 @@ footer h2 {
   background: rgba(100, 100, 100, 0.4);
 }
 .modal {
-  width: 375px;
+  width: 90%;
   margin: 15% auto auto;
   position: relative;
   text-align: center;
@@ -136,6 +140,34 @@ footer h2 {
   }
   header {
     text-align: left;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  input#search {
+    align-self: flex-end;
+    margin-left: auto;
+  }
+  .modal {
+    width: 50%;
+  }
+  h2.name {
+    color: #4c4b4b;
+    margin-bottom: 10px;
+  }
+  .text-container {
+    color: grey;
+  }
+  .text-container p {
+    color: grey;
+    padding: 5px 0 5px 0;
+  }
+  .text-container hr {
+    margin-bottom: 30px;
+  }
+  .modal-content img.avatar {
+    width: 10em;
+    height: 10em;
   }
 }
 
@@ -154,8 +186,10 @@ footer h2 {
   }
   img.avatar {
     width: 6em;
+    height: 6em;
     margin: 0;
   }
+
   .text-container {
     margin-left: 10px;
     padding-top: 25px;

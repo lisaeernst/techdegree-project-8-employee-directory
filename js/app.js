@@ -70,16 +70,15 @@ and store those values in the variable imgBoxes.
 
 */
 
-const search = document.querySelector("#searchBar");
-const cardBoxes = document.querySelectorAll(".card .name");
+const search = document.querySelector("#search");
 
 const handleSearch = (event) => {
+  const cardBoxes = document.querySelectorAll(".card .name");
   const searchTerm = event.target.value.toLowerCase();
 
   cardBoxes.forEach((cardBox) => {
     const text = cardBox.textContent.toLowerCase();
-    /* const box = cardBox.parentElement; */
-    const box = document.getElementById("cardDiv");
+    const box = cardBox.parentElement.parentElement;
 
     if (text.includes(searchTerm)) {
       box.style.display = "block";
@@ -97,13 +96,13 @@ search.addEventListener("search", handleSearch); // clearing the search field us
 /* ***************************************  */
 
 function displayModal(index) {
-  /* use objext destructuring make our template literal cleaner */
+  /* use object destructuring make our template literal cleaner */
   let {
     name,
     dob,
     phone,
     email,
-    location: { city, street, state, postcode },
+    location: { street, city, state, postcode },
     picture,
   } = employees[index];
 
@@ -117,11 +116,11 @@ function displayModal(index) {
           <p class="email">${email}</p>
           <p class="address">${city}</p>
           <hr>
-          <p">${phone}</p>
-          <p class="address">${street}, ${state}, ${postcode}</p>
+          <p>${phone}</p>
+          <p class="address">${street} ${city} ${state} ${postcode}</p>
+      
           <p>Birthday:
           ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
-
         </div>
       `;
 
