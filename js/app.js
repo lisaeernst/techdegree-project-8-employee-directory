@@ -54,7 +54,7 @@ fetch(urlAPI)
   }
 
   /*  SEARCH  BAR */
-  const employeeNames = document.getElementsByClassName('.name');
+  const employeeNames = document.getElementsByClassName('.card .name');
   const search = document.getElementById("searchBar");
 
   searchBar.addEventListener('keyup', (e) => {
