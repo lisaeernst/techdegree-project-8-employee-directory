@@ -109,8 +109,9 @@ function displayModal(index) {
   let date = new Date(dob.date);
 
   const modalHTML = `
+  <button id="previous">Previous</button>
         <img class="avatar" src="${picture.large}" />
-
+        <button id="next">Next</button>
         <div class="text-container">
           <h2 class="name">${name.first} ${name.last}</h2>
           <p class="email">${email}</p>
@@ -138,10 +139,30 @@ gridContainer.addEventListener("click", (e) => {
     /* select the card element based on its proximity to actual element clicked */
 
     const card = e.target.closest(".card");
-    const index = card.getAttribute("data-index");
+    index = card.getAttribute("data-index"); // removed const to make this a global variable for prev /next buttons
     displayModal(index);
   }
 });
+
+/* *****************************************************  */
+/* Previous and Next Buttons                              */
+/* *****************************************************  */
+
+
+let nextButton = document.getElementById('next');
+let prevButton = document.getElementById('previous');
+
+nextButton.addEventListener("click", (event) => {
+  if(event.target === nextButton) {
+    displayModal(index +1)
+  }
+});
+
+prevButton.addEventListener("click", (event) => {
+  if(event.target === prevButton) {
+    displayModal(index -1)
+  }
+})
 
 /* *****************************************************  */
 /* Event Listener click on the X closes the modal window  */
@@ -150,3 +171,6 @@ gridContainer.addEventListener("click", (e) => {
 modalClose.addEventListener("click", () => {
   overlay.classList.add("hidden");
 });
+
+
+
