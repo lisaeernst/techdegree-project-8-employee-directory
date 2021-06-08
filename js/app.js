@@ -125,8 +125,22 @@ function displayModal(index) {
         </div>
       `;
 
+      let nextButton = document.getElementById('next');
+let prevButton = document.getElementById('previous');
   overlay.classList.remove("hidden");
   modalContainer.innerHTML = modalHTML;
+
+  nextButton.addEventListener("click", (event) => {
+    if(event.target === nextButton) {
+      displayModal(index +1)
+    }
+  });
+  
+  prevButton.addEventListener("click", (event) => {
+    if(event.target === prevButton) {
+      displayModal(index -1)
+    }
+  })
 }
 
 /* *****************************************  */
@@ -149,20 +163,9 @@ gridContainer.addEventListener("click", (e) => {
 /* *****************************************************  */
 
 
-let nextButton = document.getElementById('next');
-let prevButton = document.getElementById('previous');
 
-nextButton.addEventListener("click", (event) => {
-  if(event.target === nextButton) {
-    displayModal(index +1)
-  }
-});
 
-prevButton.addEventListener("click", (event) => {
-  if(event.target === prevButton) {
-    displayModal(index -1)
-  }
-})
+
 
 /* *****************************************************  */
 /* Event Listener click on the X closes the modal window  */
@@ -171,6 +174,3 @@ prevButton.addEventListener("click", (event) => {
 modalClose.addEventListener("click", () => {
   overlay.classList.add("hidden");
 });
-
-
-
