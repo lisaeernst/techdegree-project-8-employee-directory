@@ -139,8 +139,11 @@ let prevButton = document.getElementById('previous');
 
 /* use the variable names for each button for the click event handlers. Then if the next or previous button
 is equal to nextButton, or prevButton, call the displayModal function and increase the data found
-in index by either 1 for the next button, or -1 for the previous button. This creates a new modal
-window either way, forward or backwards.  */
+in index by either 1 for the next button, or -1 for the previous button. To loop through the modals if you 
+reach the 1st or 12th modal the displayModal(0) brings the modal back to the first modal
+and displayModal(11) brings us back to the 12th modal. Since we start the array at 0 we use
+11 and 0 to indicate the 12th and first modals. This creates a new modal window either way, 
+forward or backwards.  */
 
   nextButton.addEventListener("click", (event) => {
     if(event.target === nextButton) {
