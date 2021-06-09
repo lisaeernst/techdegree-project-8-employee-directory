@@ -137,7 +137,7 @@ function displayModal(index) {
 let nextButton = document.getElementById('next');
 let prevButton = document.getElementById('previous');
 
-/* use the variable names for each button for the click event handlers. Then if the next or previous button
+/* then use the variable names for each button for the click event handlers. Then if the next or previous button
 is equal to nextButton, or prevButton, call the displayModal function and increase the data found
 in index by either 1 for the next button, or -1 for the previous button. To loop through the modals if you 
 reach the 1st or 12th modal the displayModal(0) brings the modal back to the first modal
