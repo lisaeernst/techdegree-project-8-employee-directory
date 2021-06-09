@@ -138,9 +138,9 @@ let nextButton = document.getElementById('next');
 let prevButton = document.getElementById('previous');
 
 /* use the variable names for each button for the click event handlers. Then if the next or previous button
-is equal to nextButton, or prevButton call the displayModal function and increase the data found
+is equal to nextButton, or prevButton, call the displayModal function and increase the data found
 in index by either 1 for the next button, or -1 for the previous button. This creates a new modal
-window either way forward or backwards.  */
+window either way, forward or backwards.  */
 
   nextButton.addEventListener("click", (event) => {
     if(event.target === nextButton) {
@@ -164,13 +164,12 @@ gridContainer.addEventListener("click", (e) => {
   /* make sure the click is not on the gridContainer itself */
   if (e.target !== gridContainer) {
     /* select the card element based on its proximity to actual element clicked */
-
     const card = e.target.closest(".card");
    
    /* removed const from index to make it a global variable which 
    can then be used for the previous and next buttons event listeners located inside the 
    displayModal function above. use parseInt to change index from a string to an integer since we are
-   using some math on it, increase or decrease the modal by +1 or -1 for the next and previous buttons. Then
+   using some math on it, such as increase or decrease the modal by +1 or -1 for the next and previous buttons. Then
    displayModal(index) displays the modal when the card inside the grid-container is cliked on.
    */
     index = parseInt(card.getAttribute("data-index"));
@@ -185,6 +184,8 @@ gridContainer.addEventListener("click", (e) => {
 modalClose.addEventListener("click", () => {
   overlay.classList.add("hidden");
 });
+
+/* users can close the modal window by clicking anywhere else outside of the modal. Page refreshes. */
 window.onclick = function(event) {
   if (event.target == overlay) {
     overlay.style.display = "none";
