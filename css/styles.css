@@ -135,7 +135,7 @@ footer h2 {
   color: black;
   background-color: #d083838a;
   /* background-color: papayawhip; */
-  transition: background 0.7s 0 ease-in;
+  transition: background-color 0.3s ease-in;
 }
 .card:hover p {
   color: black;
@@ -151,7 +151,7 @@ footer h2 {
 }
 .next:hover,
 .previous:hover {
-  background-color: papayawhip;
+  background-color: #b74343;
   cursor: pointer;
 }
 .round {
