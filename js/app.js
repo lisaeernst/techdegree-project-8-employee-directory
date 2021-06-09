@@ -109,9 +109,9 @@ function displayModal(index) {
   let date = new Date(dob.date);
 
   const modalHTML = `
-            <button id="previous">Previous</button>
+            <button class="previous round" id="previous">&#8249;</button>
         <img class="avatar" src="${picture.large}" />
-            <button id="next">Next</button>
+            <button class="next round" id="next">&#8250</button>
         <div class="text-container">
           <h2 class="name">${name.first} ${name.last}</h2>
           <p class="email">${email}</p>

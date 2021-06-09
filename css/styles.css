@@ -140,21 +140,24 @@ footer h2 {
 .card:hover p {
   color: black;
 }
-.btn-next,
-.btn-previous {
-  border: none;
-  outline: none;
-  background: #888;
-  padding: 10px 30px;
-  font-size: 20px;
-  color: #ddd;
-  cursor: pointer;
-  margin: 10px auto;
-}
-.btn-next:hover,
-.btn-previous:hover {
-  background-color: #b74343;
+
+/* modal window next and previous button styles */
+.next,
+.previous {
+  background-color: #dcdada;
   color: black;
+  border: none;
+  font-size: 1.5em;
+}
+.next:hover,
+.previous:hover {
+  background-color: papayawhip;
+  cursor: pointer;
+}
+.round {
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
 }
 
 /* /////////////////////////
