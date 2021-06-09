@@ -63,10 +63,12 @@ function displayEmployees(employeeData) {
 
 1. Create variables to target the search bar with an ID of searchBar and store 
 that in the search variable. Then target the card h2's with a class of name
-and store those values in the variable imgBoxes.
+and store those values in the variable cardBoxes.
 
-2. Create a function and store the information in the variable handleSearch.
-3. Event parameter takes the 
+2. Create a function handleSearch.
+3. Make sure any entered text in the search field is converted to lower case.
+4. if/else statement checks to see if data entered has the same characters as currently displaying
+    employee names in the cards, and displays only that, or those cards, that match or otherwise hides them.
 
 */
 
