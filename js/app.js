@@ -177,9 +177,9 @@ gridContainer.addEventListener("click", (e) => {
   }
 });
 
-/* *****************************************************  */
-/* Event Listener click on the X closes the modal window  */
-/* *****************************************************  */
+/* ******************************************************************************  */
+/* Event Listener click on the X closes the modal window & also outside the modal  */
+/* ******************************************************************************  */
 
 modalClose.addEventListener("click", () => {
   overlay.classList.add("hidden");
