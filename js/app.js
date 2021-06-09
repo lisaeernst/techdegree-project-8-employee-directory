@@ -83,7 +83,7 @@ const handleSearch = (event) => {
     const box = cardBox.parentElement.parentElement;
 
     if (text.includes(searchTerm)) {
-      box.style.display = "block";
+      box.style.display = "flex";
     } else {
       box.style.display = "none";
     }
@@ -144,13 +144,25 @@ window either way, forward or backwards.  */
 
   nextButton.addEventListener("click", (event) => {
     if(event.target === nextButton) {
-      displayModal(index +1)
+      if(index === 12) {
+        // get the last modal with 12
+       /*  nextButton.style.display = "none"; */
+       displayModal(index -1); 
+      } else {
+        displayModal(index +1);
+      }
     }
   });
   
   prevButton.addEventListener("click", (event) => {
     if(event.target === prevButton) {
-      displayModal(index -1)
+      if(index === 0) {
+        // get the first modal with 0
+        /* prevButton.style.display = "none"; */
+        displayModal(index 12);
+      } else {
+        displayModal(index -1);
+      }
     }
   });
 
