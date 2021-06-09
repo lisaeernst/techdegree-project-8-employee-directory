@@ -144,10 +144,8 @@ window either way, forward or backwards.  */
 
   nextButton.addEventListener("click", (event) => {
     if(event.target === nextButton) {
-      if(index === 12) {
-        // get the last modal with 12
-       /*  nextButton.style.display = "none"; */
-       displayModal(index -1); 
+      if(index === 11) {
+       displayModal(0); 
       } else {
         displayModal(index +1);
       }
@@ -157,9 +155,7 @@ window either way, forward or backwards.  */
   prevButton.addEventListener("click", (event) => {
     if(event.target === prevButton) {
       if(index === 0) {
-        // get the first modal with 0
-        /* prevButton.style.display = "none"; */
-        displayModal(index 12);
+        displayModal(11);
       } else {
         displayModal(index -1);
       }
@@ -200,7 +196,6 @@ modalClose.addEventListener("click", () => {
 /* users can close the modal window by clicking anywhere else outside of the modal. Page refreshes. */
 window.onclick = function(event) {
   if (event.target == overlay) {
-    overlay.style.display = "none";
-    window.location.reload();
+    overlay.classList.add("hidden");
   }
 }
