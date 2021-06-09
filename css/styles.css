@@ -207,14 +207,11 @@ footer h2 {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 25px 5px;
-    /*  padding-bottom: 150px; */
   }
   .card {
     flex-direction: row;
     text-align: left;
     padding: 20px 10px 20px 10px;
-    /*  padding: 11px; */
-    /* width: 100%; */
   }
   img.avatar {
     width: 6em;
@@ -233,7 +230,6 @@ footer h2 {
     font-size: 0.8em;
   }
   footer {
-    /*   position: fixed; */
     bottom: 0px;
   }
 }
