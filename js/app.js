@@ -183,3 +183,9 @@ gridContainer.addEventListener("click", (e) => {
 modalClose.addEventListener("click", () => {
   overlay.classList.add("hidden");
 });
+window.onclick = function(event) {
+  if (event.target == overlay) {
+    overlay.style.display = "none";
+    window.location.reload();
+  }
+}
