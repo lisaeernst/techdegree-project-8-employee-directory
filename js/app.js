@@ -109,9 +109,9 @@ function displayModal(index) {
   let date = new Date(dob.date);
 
   const modalHTML = `
-  <button id="previous">Previous</button>
+            <button id="previous">Previous</button>
         <img class="avatar" src="${picture.large}" />
-        <button id="next">Next</button>
+            <button id="next">Next</button>
         <div class="text-container">
           <h2 class="name">${name.first} ${name.last}</h2>
           <p class="email">${email}</p>
@@ -125,10 +125,20 @@ function displayModal(index) {
         </div>
       `;
 
-      let nextButton = document.getElementById('next');
-let prevButton = document.getElementById('previous');
+
   overlay.classList.remove("hidden");
   modalContainer.innerHTML = modalHTML;
+
+  /* make a variable for each of the previous and next buttons located in the const modalHTML variable template
+  literal */
+
+let nextButton = document.getElementById('next');
+let prevButton = document.getElementById('previous');
+
+/* use the variable names for each button for the click event handlers. Then if the next or previous button
+is equal to nextButton, or prevButton call the displayModal function and increase the data found
+in index by either 1 for the next button, or -1 for the previous button. This creates a new modal
+window either way forward or backwards.  */
 
   nextButton.addEventListener("click", (event) => {
     if(event.target === nextButton) {
@@ -140,8 +150,9 @@ let prevButton = document.getElementById('previous');
     if(event.target === prevButton) {
       displayModal(index -1)
     }
-  })
-}
+  });
+
+};
 
 /* *****************************************  */
 /* Event Listener click on the card elements  */
@@ -153,19 +164,17 @@ gridContainer.addEventListener("click", (e) => {
     /* select the card element based on its proximity to actual element clicked */
 
     const card = e.target.closest(".card");
-    index = card.getAttribute("data-index"); // removed const to make this a global variable for prev /next buttons
+   
+   /* removed const from index to make it a global variable which 
+   can then be used for the previous and next buttons event listeners located inside the 
+   displayModal function above. use parseInt to change index from a string to an integer since we are
+   using some math on it, increase or decrease the modal by +1 or -1 for the next and previous buttons. Then
+   displayModal(index) displays the modal when the card inside the grid-container is cliked on.
+   */
+    index = parseInt(card.getAttribute("data-index"));
     displayModal(index);
   }
 });
-
-/* *****************************************************  */
-/* Previous and Next Buttons                              */
-/* *****************************************************  */
-
-
-
-
-
 
 /* *****************************************************  */
 /* Event Listener click on the X closes the modal window  */
