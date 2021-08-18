@@ -16,7 +16,7 @@ const modalClose = document.querySelector(".modal-close");
 /* *****************************************  */
 /*          fetch data from API               */
 /* *****************************************  */
-/* pass the url info to fetch then format the response as JSON. Return the results then pass control to the 
+/* pass the url info to fetch then format (read and parse) the response as JSON. Return the results then pass control to the 
 displayEmployees fucntion then console.log the results */
 
 fetch(urlAPI)
