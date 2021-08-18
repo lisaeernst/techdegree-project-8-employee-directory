@@ -33,7 +33,7 @@ function displayEmployees(employeeData) {
   //store the employee HTML as we create it
   let employeeHTML = "";
 
-  //loop through each employee and create HTML markup
+  //loop through each employee and create the HTML markup
   employees.forEach((employee, index) => {
     let name = employee.name;
     let email = employee.email;
