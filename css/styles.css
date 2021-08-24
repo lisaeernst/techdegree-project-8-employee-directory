@@ -15,34 +15,55 @@ body {
   position: relative;
   color: #2c2c2c;
   font-family: "Roboto", sans-serif;
-  background-color: #f7f5f5;
 }
 
 .grid-container {
+  padding-top: 80px;
   padding-bottom: 40px;
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
     "header"
+    "searchEmployees"
     "main";
 }
 header {
   grid-area: header;
   display: flex;
   flex-direction: column;
-  background-color: #b74343;
-  padding-top: 25px;
-  margin-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-bottom: 2px solid #d2d2d2;
+  background-color: #547bc4;
 }
+#searchEmployees {
+  /* grid-area: header;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #fffefe;
+  background-color: #547bc4;
+  padding-top: 25px; */
 
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top: -50px;
+}
+header img {
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+.header-h1 {
+  position: absolute;
+}
 input#search {
   height: 30px;
   margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 25px;
   width: 100%;
   height: 30px;
+  border: solid 1px #e0e0e0;
+  border-radius: 5px;
+  box-shadow: -1px 3px 13px -5px rgba(0, 0, 0, 0.75);
 }
 
 main {
@@ -53,8 +74,9 @@ main {
 
 header h1 {
   margin-top: 0;
-  font-size: 1.2em;
+  font-size: 2em;
   font-weight: 400;
+  color: white;
 }
 .card {
   display: flex;
@@ -87,7 +109,7 @@ footer {
   width: 100%;
   text-align: center;
   color: white;
-  background-color: #b74343;
+  background-color: #547bc4;
   height: auto;
   margin-top: 25px;
 }
@@ -110,7 +132,7 @@ footer h2 {
 }
 .modal {
   width: 90%;
-  margin: 15% auto auto;
+  margin: 25% auto auto;
   position: relative;
   text-align: center;
   background: #fff;
@@ -121,9 +143,10 @@ footer h2 {
 .modal-close {
   position: absolute;
   right: 15px;
-  top: 5px;
+  top: 15px;
   cursor: pointer;
 }
+
 .hidden {
   display: none;
 }
@@ -132,13 +155,14 @@ footer h2 {
 }
 .card:hover {
   cursor: pointer;
-  color: black;
-  background-color: #d083838a;
-  /* background-color: papayawhip; */
+  color: white;
+  /* background-color: #d083838a; */
+  background-color: rgb(84 123 196 / 91%);
   transition: background-color 0.3s ease-in;
 }
-.card:hover p {
-  color: black;
+.card:hover p,
+.card:hover h2 {
+  color: white;
 }
 
 /* modal window next and previous button styles */
@@ -151,8 +175,9 @@ footer h2 {
 }
 .next:hover,
 .previous:hover {
-  background-color: #b74343;
+  background-color: #547bc4;
   cursor: pointer;
+  color: white;
 }
 .round {
   border-radius: 50%;
@@ -163,6 +188,19 @@ footer h2 {
 /* /////////////////////////
 /* Media Queries          */
 /* ////////////////////// */
+
+@media (min-width: 320px) {
+  input#search {
+    width: 80%;
+    height: 70px;
+  }
+  header h1 {
+    text-align: center;
+  }
+  #searchEmployees {
+    margin-top: -30px;
+  }
+}
 
 @media (min-width: 768px) {
   .grid-container {
@@ -175,11 +213,7 @@ footer h2 {
     justify-content: space-around;
     align-items: center;
   }
-  input#search {
-    align-self: flex-end;
-    margin-left: auto;
-    width: 20rem;
-  }
+
   .modal {
     width: 50%;
   }
