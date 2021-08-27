@@ -36,11 +36,6 @@ header {
  
 }
 
-.logo-container {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-}
 #searchEmployees {
   /* grid-area: header;
   display: flex;
@@ -61,6 +56,9 @@ header img {
 }
 .logo {
   opacity: 1;
+  width: 300px;
+  height: 300px;
+  position: absolute;
 }
 .header-h1 {
   position: absolute;
