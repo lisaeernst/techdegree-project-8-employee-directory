@@ -32,6 +32,13 @@ header {
   display: flex;
   flex-direction: column;
   background-color: #547bc4;
+ 
+  /* background-image: url("images/annie-spratt-QckxruozjRg-unsplash.jpg"); */
+}
+.logo-container {
+  width: 300px;
+  height: 300px;
+  position: absolute;
 }
 #searchEmployees {
   /* grid-area: header;
@@ -49,10 +56,11 @@ header {
 header img {
   width: 100%;
   object-fit: cover;
-  opacity: 0.4;
+  /* opacity: 0.4; */
 }
 .header-h1 {
   position: absolute;
+  margin-top: 375px;
 }
 input#search {
   height: 30px;
